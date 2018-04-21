@@ -195,7 +195,7 @@ VeseyncPlugPlatform.prototype.setPowerState = function(thisPlug, powerState, cal
     }).then( () => {
         callback();
     }).catch( (err) => {
-        this.log("Failed to set power state to", powerState);
+        this.log("Failed to set power state to", powerState, err);
         callback(err);
     });
 };
